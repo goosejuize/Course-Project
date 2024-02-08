@@ -1,0 +1,53 @@
+Start
+
+Display welcome message: "Welcome to AutoZone!"
+
+Repeat:
+    Display menu options:
+        1. Add Product
+        2. Set Appointment
+        3. Exit
+    Prompt user to choose an option: (input)
+
+    If option is 1:
+        Repeat:
+            Display available products with corresponding numbers and prices
+            Prompt user to enter product number: (input)
+            Prompt user to enter quantity: (input)
+
+            Create a Product object with the selected product and quantity
+            Add the Product object to the Order Manager
+            Display success message: "Product added successfully!"
+
+            Prompt user: "Add another product? (yes/no)" (input)
+
+        Until user decides not to add another product
+
+    Else if option is 2:
+        Prompt user to enter appointment date in MM/dd/yyyy format: (input)
+        Prompt user to enter appointment time in HH:mm AM/PM format: (input)
+        Create an Appointment object with the entered date and time
+        Set the appointment in the Order Manager
+        Display success message: "Appointment set successfully!"
+
+    Else if option is 3:
+        Check if any products or appointment are set:
+            If not, display message: "No products or appointment set. Please add products or set an appointment before exiting."
+            Else if no products are set, display message: "No products set. Please add products before exiting."
+            Else if no appointment is set, display message: "No appointment set. Please set an appointment before exiting."
+            Else:
+                Write the order summary to a file named "AutoZone_summary.txt" using the Order Manager's method
+                Display message: "Order summary written to AutoZone_summary.txt."
+                Exit the program
+
+    Else:
+        Display message: "Invalid choice. Please choose a valid option."
+
+Repeat until user chooses to exit the program
+
+End
+
+
+
+
+
